@@ -8,6 +8,9 @@ const app = express();
 dotenv.config();
 const PORT = process.env.PORT;
 
+// let you extract json data out of body
+app.use(express.json())
+
 app.use("/api/auth", authRoutes)
 
 app.listen(PORT, () => {
