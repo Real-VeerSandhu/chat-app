@@ -1,3 +1,71 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes subtlePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05); /* Very subtle scaling */
+    opacity: 1; /* Slight fade-in effect */
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.wave {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 150, 255, 0.2);
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.6;
+  animation: wave-move 6s linear infinite;
+}
+
+/* First wave */
+.wave-1 {
+  top: 20%;
+  animation-delay: 0s;
+}
+
+/* Second wave */
+.wave-2 {
+  top: 50%;
+  animation-delay: 3s;
+}
+
+/* Wave movement */
+@keyframes wave-move {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
