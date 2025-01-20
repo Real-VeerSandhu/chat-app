@@ -6,8 +6,8 @@ import { Users } from "lucide-react";
 
 const Sidebar = () => {
     const { getUsers, users, selectedUser, setSelectedUser, isUsersLoading } = useChatStore();
-    const onlineUsers = []; // will change with socketio
 
+    const {onlineUsers} = useAuthStore();
     useEffect(() => {
         getUsers()
     }, [getUsers])
