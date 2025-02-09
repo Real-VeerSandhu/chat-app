@@ -13,25 +13,27 @@ const ChatContainer = () => {
         isMessagesLoading,
         selectedUser,
         subscribeToMessages,
-        unsubscribeFromMessage
+        unsubscribeFromMessages
     } = useChatStore();
 
     const { authUser } = useAuthStore();
     const messageEndRef = useRef(null);
 
     useEffect(() => {
-        getMessages(selectedUser._id);
-
-        subscribeToMessages();
-
-        return () => unsubscribeFromMessage();
-    }, [selectedUser._id, getMessages, subscribeToMessages, unsubscribeFromMessage]);
+      getMessages(selectedUser._id);
+  
+      subscribeToMessages();
+  
+      return () => unsubscribeFromMessages();
+    }, [selectedUser._id, getMessages, subscribeToMessages, unsubscribeFromMessages]);
+  
 
     useEffect(() => {
       if (messageEndRef.current && messages) {
-          messageEndRef.current.scrollIntoView({ behaviour: "smooth"});
+        messageEndRef.current.scrollIntoView({ behavior: "smooth" });
       }
-    }, [messages])
+    }, [messages]);
+  
 
     if (isMessagesLoading) return (
         <div className="flex-1 flex flex-col overflow-auto">
