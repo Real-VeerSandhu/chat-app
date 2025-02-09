@@ -36,7 +36,15 @@ const Navbar = () => {
             {authUser && (
               <>
                 <Link to={"/profile"} className={`btn btn-sm gap-2`}>
-                  <User className="size-5" />
+                {authUser.profilePic ? (
+                    <img
+                      src={authUser.profilePic}
+                      alt="Profile"
+                      className="size-7 rounded-full object-cover border-2"
+                    />
+                  ) : (
+                    <User className="size-5" />
+                  )}
                   <span className="hidden sm:inline">Profile</span>
                 </Link>
 

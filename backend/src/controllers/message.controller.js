@@ -59,7 +59,6 @@ export const sendMessage = async (req, res) => {
         await newMessage.save();
         
 
-        // todo: realtime functionality goes here
         const receiverSocketId = getReceiverSocketId(receiverId);
         // if user is online, send message, in Real Time
         if (receiverSocketId) {
