@@ -1,4 +1,4 @@
-# Live Chat Application
+# Socket Wave
 
 A modern live chat application designed for seamless real-time communication. Built with a **React** frontend and a **Node.js/Express** backend, this project leverages **Socket.IO** for real-time messaging, **MongoDB** for data storage, and **TailwindCSS** for a sleek, responsive user interface.    
 
