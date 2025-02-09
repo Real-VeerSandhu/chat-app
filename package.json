@@ -1,0 +1,13 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "A modern live chat application designed for seamless real-time communication. Built with a **React** frontend and a **Node.js/Express** backend, this project leverages **Socket.IO** for real-time messaging, **MongoDB** for data storage, and **TailwindCSS** for a sleek, responsive user interface.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
